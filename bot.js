@@ -3118,50 +3118,6 @@ client.on("message", message => {
 
 
 
-client.on("guildMemberAdd", member => { member.createDM().then(function (channel) { return channel.send(`:rose: ولكم نورت السيرفر:rose: :crown:اسم العضو ${member}:crown: انت العضو رقم ${member.guild.memberCount} `) }).catch(console.error) })
-
-
-
-
-
-client.on('message', message => {
-    if (message.content.startsWith("رابط")) {
- 
-  message.channel.createInvite({
-        thing: true,
-        maxUses: 5,
-        maxAge: 86400
-    }).then(invite =>
-      message.author.sendMessage(invite.url)
-    )
-    const embed = new Discord.RichEmbed()
-        .setColor("RANDOM")
-        .setDescription("| :white_check_mark:  | :heart:  تم ارسال الرابط على الخاص  ")
-      message.channel.sendEmbed(embed).then(message => {message.delete(10000)})
-              const Embed11 = new Discord.RichEmbed()
-        .setColor("RANDOM")
-                .setAuthor(message.guild.name, message.guild.iconURL)
-        .setDescription(`
-**
----------------------
--[${message.guild.name}]  هذا هو رابط سيرفر
----------------------
--هذا الرابط صالح للأستخدام 5 مرات 
----------------------
--هذا الرابط صالح لمده 24 ساعه 
----------------------
-**`)
-      message.author.sendEmbed(Embed11)
-    }
-});
-
-
-
-
-
-
-
-
 
 
 
@@ -3268,7 +3224,7 @@ const secreT = [
 
 
  client.on('message', message => {
-   if (message.content.startsWith("f!خواطر")) {
+   if (message.content.startsWith("!خواطر")) {
                 if(!message.channel.guild) return message.reply('** This command only for servers**');
   var embed = new Discord.RichEmbed()
   .setColor('RANDOM')
