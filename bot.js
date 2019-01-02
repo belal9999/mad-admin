@@ -3228,14 +3228,6 @@ const secreT = [
 
 
 
-bot.on('guildMemberAdd', (member) => {//Toxic Codes
-member.addRole(member.guild.roles.find('MaD', role));
-});  
-
-
-
-
-
 
 
 
