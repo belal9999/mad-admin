@@ -3029,7 +3029,7 @@ client.on("guildMemberAdd", member => {
 
 
 client.on("message", message => {
-    var prefix = "رسالة";
+    var prefix = "رسالة.";
         if (message.author.id === client.user.id) return;
         if (message.guild) {
        let embed = new Discord.RichEmbed()
